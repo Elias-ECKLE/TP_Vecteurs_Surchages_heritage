@@ -123,6 +123,12 @@ int main() {
 
 
 		cout << endl << endl << endl;
+
+
+
+		getchar();
+
+
 	return 0;
 };
 
