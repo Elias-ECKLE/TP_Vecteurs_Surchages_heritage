@@ -114,6 +114,8 @@ bool CVect2D::operator!=(CVect2D& c_v)
 }
 
 
+
+
 //autres methodes :
 
 bool coincide2D(CVect2D& c_v1, CVect2D& c_v2)
