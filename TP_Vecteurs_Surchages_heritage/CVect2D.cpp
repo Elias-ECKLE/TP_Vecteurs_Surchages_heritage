@@ -18,7 +18,7 @@ CVect2D::CVect2D(CVect2D& c_v)
 //destructeur
 CVect2D::~CVect2D()
 {
-	std::cout << "Destructeur" << std::endl;
+	//std::cout << "Destructeur" << std::endl;
 }
 
 
