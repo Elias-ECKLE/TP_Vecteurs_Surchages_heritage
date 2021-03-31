@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 
 using namespace std;
@@ -45,37 +44,46 @@ public:
 
 		//operateurs usuelles
 
-			//BUT :faire la somme des deux vecteurs
-			//ENTREE:ref instance CVect2D
-			//SORTIE :nouvelle instance CVect2D
-			CVect2D addition(CVect2D&)const;
+	CVect2D operator=(const CVect2D&);
 
-			//BUT :faire la soustraction des deux vecteurs
-			//ENTREE:ref instance CVect2D
-			//SORTIE :nouvelle instance CVect2D
-			CVect2D soustraction(CVect2D&)const;
+	//BUT :faire la somme des deux vecteurs
+	//ENTREE:ref instance CVect2D
+	//SORTIE :nouvelle instance CVect2D
+	//CVect2D addition(CVect2D&)const;
+	CVect2D operator+(CVect2D&);
 
-			//BUT :faire la multiplication des deux vecteurs
-			//ENTREE:ref instance CVect2D
-			//SORTIE :nouvelle instance CVect2D
-			CVect2D multiplication(CVect2D&)const;
+	//BUT :faire la soustraction des deux vecteurs
+	//ENTREE:ref instance CVect2D
+	//SORTIE :nouvelle instance CVect2D
+	CVect2D operator-(CVect2D&);
 
-			//BUT :faire la multiplication des deux vecteurs
-			//ENTREE:ref instance CVect2D
-			//SORTIE :nouvelle instance CVect2D
-			CVect2D division(CVect2D&)const;
+	//BUT :faire la multiplication des deux vecteurs
+	//ENTREE:ref instance CVect2D
+	//SORTIE :nouvelle instance CVect2D
+	CVect2D operator*(CVect2D&);
 
 
-		//autres :
-			//BUT :comparer les coordonnées des vecteurs et voir s'ils sont les mêmes
-			//ENTREE: 2 refs instance CVect2D
-			//SORTIE : valeur booleen
-			friend bool coincide2D(CVect2D&, CVect2D&);
+	//BUT :faire la division des deux vecteurs
+	//ENTREE:ref instance CVect3D
+	//SORTIE :nouvelle instance CVect3D
+	CVect2D operator/(CVect2D&);
 
-			//BUT :afficher les coords x et y du vecteur
-			//ENTREE: ras
-			//SORTIE : ras
-			void affiche();
+	//BUT :voir si c'est différent ou pas
+	//ENTREE:ref instance CVect3D
+	//SORTIE :boolean
+	bool operator!=(CVect2D&);
+
+
+	//autres :
+		//BUT :comparer les coordonnées des vecteurs et voir s'ils sont les mêmes
+		//ENTREE: 2 refs instance CVect2D
+		//SORTIE : valeur booleen
+	friend bool coincide2D(CVect2D&, CVect2D&);
+
+	//BUT :afficher les coords x et y du vecteur
+	//ENTREE: ras
+	//SORTIE : ras
+	void affiche();
 
 
 

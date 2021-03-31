@@ -18,6 +18,7 @@ CVect2D::CVect2D(CVect2D& c_v)
 //destructeur
 CVect2D::~CVect2D()
 {
+	std::cout << "Destructeur" << std::endl;
 }
 
 
@@ -46,9 +47,18 @@ void CVect2D::setY(float flt_y)
 
 
 
+//methodes :
 
-//operations usuelles :
-CVect2D CVect2D::addition(CVect2D& c_v) const
+
+CVect2D CVect2D::operator=(const CVect2D& c_v)
+{
+	this->m_flt_x = c_v.m_flt_x;
+	this->m_flt_y = c_v.m_flt_y;
+
+	return *this;
+}
+
+CVect2D CVect2D::operator+(CVect2D& c_v)
 {
 	CVect2D c_vResultat;
 
@@ -58,7 +68,7 @@ CVect2D CVect2D::addition(CVect2D& c_v) const
 	return c_vResultat;
 }
 
-CVect2D CVect2D::soustraction(CVect2D& c_v) const
+CVect2D CVect2D::operator-(CVect2D& c_v)
 {
 	CVect2D c_vResultat;
 
@@ -68,7 +78,7 @@ CVect2D CVect2D::soustraction(CVect2D& c_v) const
 	return c_vResultat;
 }
 
-CVect2D CVect2D::multiplication(CVect2D& c_v) const
+CVect2D CVect2D::operator*(CVect2D& c_v)
 {
 	CVect2D c_vResultat;
 
@@ -78,21 +88,30 @@ CVect2D CVect2D::multiplication(CVect2D& c_v) const
 	return c_vResultat;
 }
 
-CVect2D CVect2D::division(CVect2D& c_v) const
+CVect2D CVect2D::operator/(CVect2D& c_v)
 {
 	CVect2D c_vResultat;
 
-	if ((c_v.m_flt_x!=0)&&(c_v.m_flt_y!=0)){
+	if ((c_v.m_flt_x != 0) && (c_v.m_flt_y != 0)) {
 		c_vResultat.m_flt_x = this->m_flt_x / c_v.m_flt_x;
 		c_vResultat.m_flt_y = this->m_flt_y / c_v.m_flt_y;
 	}
-	
+
 
 	return c_vResultat;
 }
 
+bool CVect2D::operator!=(CVect2D& c_v)
+{
+	if ((this->m_flt_x == c_v.m_flt_x) && (this->m_flt_x == c_v.m_flt_y)) {
 
 
+		return false;
+	}
+	else {
+		return true;
+	}
+}
 
 
 //autres methodes :
