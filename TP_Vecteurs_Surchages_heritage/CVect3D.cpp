@@ -145,6 +145,13 @@ bool CVect3D::operator!=(CVect3D& c_v_3D)
 }
 
 
+ostream& operator<<(ostream& os, const CVect3D& c_v_3D)
+{
+
+	os <<"X :"<<c_v_3D.getX()<<" / "<<"Y : "<<c_v_3D.getY()<<" / "<< "Z :" <<c_v_3D.m_flt_z << endl;
+	return os;
+}
+
 
 
 

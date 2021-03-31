@@ -113,6 +113,11 @@ bool CVect2D::operator!=(CVect2D& c_v)
 	}
 }
 
+ostream& operator<<(ostream& os, const CVect2D& c_v)
+{
+	os <<"X: "<< c_v.m_flt_x<<" / "<<"Y :" << c_v.m_flt_y << endl;
+	return os;
+}
 
 
 

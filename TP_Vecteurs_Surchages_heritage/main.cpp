@@ -25,6 +25,7 @@ int main() {
 	c_v6_3D = c_v1_3D / c_v3_3D;
 	resultat = c_v1_3D != c_v3_3D;
 
+	cout << c_v6_3D;
 
 	return 0;
 };
